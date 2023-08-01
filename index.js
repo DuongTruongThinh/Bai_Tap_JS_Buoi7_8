@@ -142,7 +142,7 @@ function sapXepTangDan() {
 }
 // Bài 8 tìm số nguyên tố đầu tiên
 function timSoNguyenToDauTien() {
-  function isPrimeNumber() {
+  function isPrimeNumber(number) {
     if (number <= 1) return false;
     for (var i = 2; i <= Math.sqrt(number); i++) {
       if (number % i == 0) {
@@ -151,15 +151,14 @@ function timSoNguyenToDauTien() {
     }
     return true;
   }
-  function findFirstPrimeNumber(numberArr) {
-    for (const number of numberArr) {
-      if (isPrimeNumber(number)) {
-        return number;
-      }
+  function findFirstPrimeNumber() {
+    for (var i = 0; i < numberArr.length; i++) {
+      if (isPrimeNumber(numberArr[i])) return numberArr[i];
     }
     return null;
   }
-  if (findFirstPrimeNumber == null) {
+  var soNguyenToDauTien = findFirstPrimeNumber();
+  if (soNguyenToDauTien == null) {
     Swal.fire({
       title: "Kết quả",
       text: `Không có số nguyên tố trong chuỗi`,
@@ -169,7 +168,65 @@ function timSoNguyenToDauTien() {
   } else {
     Swal.fire({
       title: "Kết quả",
-      text: `Số nguyên tố đầu tiên là ${findFirstPrimeNumber()}`,
+      text: `Số nguyên tố đầu tiên là ${soNguyenToDauTien}`,
+      icon: "success",
+      confirmButtonText: "Tiếp tục",
+    });
+  }
+}
+// Bài 9 Đếm số nguyên
+function demSoNguyen() {
+  function isInteger(number) {
+    return Number.isInteger(number);
+  }
+  var soSoNguyen = 0;
+  for (var i = 0; i < numberArr.length; i++) {
+    if (isInteger(numberArr[i])) soSoNguyen++;
+  }
+  if (soSoNguyen == 0) {
+    Swal.fire({
+      title: "Kết quả",
+      text: `Không có số nguyên trong chuỗi`,
+      icon: "success",
+      confirmButtonText: "Tiếp tục",
+    });
+  } else {
+    Swal.fire({
+      title: "Kết quả",
+      text: `Số lượng số nguyên trong chuỗi là ${soSoNguyen}`,
+      icon: "success",
+      confirmButtonText: "Tiếp tục",
+    });
+  }
+}
+// Bài 10 So sánh số lượng số âm và số dương
+function soSanhSoLuongSoAmVaSoDuong() {
+  var soAm = 0;
+  var soDuong = 0;
+  for (var i = 0; i < numberArr.length; i++) {
+    if (numberArr[i] < 0) soAm++;
+    else if (numberArr[i] > 0) soDuong++;
+  }
+  if (soAm > soDuong) {
+    Swal.fire({
+      title: "Kết quả",
+      text: `Số lượng số âm nhiều hơn số dương`,
+      icon: "success",
+      confirmButtonText: "Tiếp tục",
+    });
+  }
+  if (soAm < soDuong) {
+    Swal.fire({
+      title: "Kết quả",
+      text: `Số lượng số âm ít hơn số dương`,
+      icon: "success",
+      confirmButtonText: "Tiếp tục",
+    });
+  }
+  if (soAm == soDuong) {
+    Swal.fire({
+      title: "Kết quả",
+      text: `Số lượng số âm bằng số lượng số dương`,
       icon: "success",
       confirmButtonText: "Tiếp tục",
     });
