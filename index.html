@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BÀI TẬP JS BUỔI 7-8</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- sweetalert2 -->
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bài tập JS buổi 7-8</h1>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          class="form-control"
+          id="number"
+          placeholder="Nhập số"
+        />
+      </div>
+      <button class="btn btn-success my-3" onclick="themSo()">Thêm</button>
+      <div id="result"></div>
+      <!-- Bài 1 -->
+      <h3>1. Tổng số dương</h3>
+      <button class="btn btn-success my-3" onclick="tinhTongSoDuong()">
+        Tổng số dương
+      </button>
+      <!-- Bài 2 -->
+      <h3>2. Đếm số dương</h3>
+      <button class="btn btn-success my-3" onclick="demSoDuong()">
+        Đếm số dương
+      </button>
+      <!-- Bài 3 -->
+      <h3>3. Tìm số nhỏ nhất</h3>
+      <button class="btn btn-success my-3" onclick="timSoNhoNhat()">
+        Tìm số nhỏ nhất
+      </button>
+      <!-- Bài 4 -->
+      <h3>4. Tìm số dương nhỏ nhất</h3>
+      <button class="btn btn-success my-3" onclick="timSoDuongNhoNhat()">
+        Tìm số dương nhỏ nhất
+      </button>
+      <!-- Bài 5 -->
+      <h3>5. Tìm số chẵn cuối cùng</h3>
+      <button class="btn btn-success my-3" onclick="timSoChanCuoiCung()">
+        Tìm số chẵn cuối cùng
+      </button>
+      <!-- Bài 6 -->
+      <h3>6. Đổi chỗ</h3>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          class="form-control"
+          id="viTri1"
+          placeholder="Vị trí 1"
+        />
+      </div>
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          class="form-control"
+          id="viTri2"
+          placeholder="Vị trí 2"
+        />
+      </div>
+      <button class="btn btn-success my-3" onclick="doiCho()">Đổi chỗ</button>
+      <!-- Bài 7 -->
+      <h3>7. Sắp xếp tăng dần</h3>
+      <button class="btn btn-success my-3" onclick="sapXepTangDan()">
+        Sắp xếp tăng dần
+      </button>
+      <!-- Bài 8 -->
+      <h3>7. Sắp xếp tăng dần</h3>
+      <button class="btn btn-success my-3" onclick="sapXepTangDan()">
+        Sắp xếp tăng dần
+      </button>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- sweetalert2 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"
+      integrity="sha256-mW1wrhuKp2Cl0DCVr/7+GTdl168ZrmB6FayoMAlSmH0="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
